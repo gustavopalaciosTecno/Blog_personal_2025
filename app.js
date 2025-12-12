@@ -1,0 +1,224 @@
+// Datos del carrusel - puedes reemplazar estas URLs con tus propias imágenes
+        const carouselImages = [
+            {
+                url: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+                title: "Desarrollo Web Moderno",
+                description: "Creación de sitios web responsivos y aplicaciones web con las últimas tecnologías."
+            },
+            {
+                url: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80",
+                title: "Diseño UI/UX",
+                description: "Interfaces intuitivas y experiencias de usuario excepcionales para cada proyecto."
+            },
+            {
+                url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+                title: "Soluciones a Medida",
+                description: "Desarrollo de software personalizado para satisfacer necesidades específicas de negocio."
+            },
+            {
+                url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1715&q=80",
+                title: "Analítica y Datos",
+                description: "Transformación de datos en insights accionables para la toma de decisiones."
+            }
+        ];
+
+        // Variables del carrusel
+        let currentSlide = 0;
+        const carouselSlide = document.getElementById('carouselSlide');
+        const carouselDots = document.getElementById('carouselDots');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Inicializar el carrusel
+        function initCarousel() {
+            // Crear elementos del carrusel
+            carouselImages.forEach((image, index) => {
+                // Crear elemento de slide
+                const slideItem = document.createElement('div');
+                slideItem.className = 'carousel-item';
+                slideItem.innerHTML = `
+                    <img src="${image.url}" alt="${image.title}">
+                    <div class="carousel-caption">
+                        <h2>${image.title}</h2>
+                        <p>${image.description}</p>
+                    </div>
+                `;
+                carouselSlide.appendChild(slideItem);
+                
+                // Crear punto indicador
+                const dot = document.createElement('div');
+                dot.className = `dot ${index === 0 ? 'active' : ''}`;
+                dot.dataset.index = index;
+                dot.addEventListener('click', () => goToSlide(index));
+                carouselDots.appendChild(dot);
+            });
+            
+            // Actualizar el carrusel
+            updateCarousel();
+        }
+
+        // Actualizar posición del carrusel
+        function updateCarousel() {
+            carouselSlide.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Actualizar puntos activos
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Ir a slide específico
+        function goToSlide(index) {
+            currentSlide = index;
+            if (currentSlide >= carouselImages.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = carouselImages.length - 1;
+            updateCarousel();
+        }
+
+        // Slide siguiente
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= carouselImages.length) currentSlide = 0;
+            updateCarousel();
+        }
+
+        // Slide anterior
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) currentSlide = carouselImages.length - 1;
+            updateCarousel();
+        }
+
+        // Event listeners para navegación del carrusel
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Cambio automático de slides cada 5 segundos
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        // Pausar el carrusel al pasar el mouse
+        carouselSlide.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+
+        // Reanudar el carrusel al quitar el mouse
+        carouselSlide.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, 5000);
+        });
+
+        // Navegación suave para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Calcular posición considerando el header fijo
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Actualizar enlace activo en navegación
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Menú responsive
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Cerrar menú al hacer clic en un enlace en móvil
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+
+        // Filtrado de portafolio
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Actualizar botón activo
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Filtrar elementos
+                const filterValue = this.dataset.filter;
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    if (filterValue === 'all' || item.dataset.category === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Formulario de contacto
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aquí normalmente enviarías el formulario a un servidor
+            // Por ahora, solo mostraremos una alerta
+            alert('¡Gracias por tu mensaje! Te contactaré pronto.');
+            contactForm.reset();
+        });
+
+        // Actualizar enlace activo al hacer scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const headerHeight = document.querySelector('header').offsetHeight;
+                
+                if (scrollY >= (sectionTop - headerHeight - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Inicializar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            initCarousel();
+            
+            // Para propósitos de demostración, establecer la primera sección como activa
+            document.querySelector('.nav-link').classList.add('active');
+        });
