@@ -8,17 +8,17 @@
             {
                 url: "https://www.dritec.com.ar/images/01-Reparacion.jpg",
                 title: "Soluciones inmediatas",
-                description: "Te ofercemos el mejor servicio."
+                description: "Te ofrecemos el mejor precio y el mejor servicio."
             },
             {
                 url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8C9dmireQvh0mHTXYkAMve5vfivfhQ3grQ&s",
                 title: "Asistencia técnica",
-                description: "Soluciones inmediatas y una excelente asistencia técnica"
+                description: "Soluciones inmediatas y una excelente asistencia técnica."
             },
             {
                 url: "https://media.kingston.com/kingston/opengraph/ktc-opengraph-solutions-gaming-how-to-clean-your-pc-system.png",
                 title: "Limpieza y Optimización",
-                description: "Optimizamos tu sistema operativo de forma integral"
+                description: "Optimizamos tu sistema operativo de forma integral."
             }
         ];
 
