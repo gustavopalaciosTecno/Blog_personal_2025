@@ -1,24 +1,24 @@
 // Datos del carrusel - puedes reemplazar estas URLs con tus propias imágenes
         const carouselImages = [
             {
-                url: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-                title: "Desarrollo Web Moderno",
-                description: "Creación de sitios web responsivos y aplicaciones web con las últimas tecnologías."
+                url: "https://d3puay5pkxu9s4.cloudfront.net/curso/4308/800_imagen.jpg",
+                title: "Reparación integral",
+                description: "Reparación integral y asesoramiento constante."
             },
             {
-                url: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80",
-                title: "Diseño UI/UX",
-                description: "Interfaces intuitivas y experiencias de usuario excepcionales para cada proyecto."
+                url: "https://www.dritec.com.ar/images/01-Reparacion.jpg",
+                title: "Soluciones inmediatas",
+                description: "Te ofercemos el mejor servicio."
             },
             {
-                url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-                title: "Soluciones a Medida",
-                description: "Desarrollo de software personalizado para satisfacer necesidades específicas de negocio."
+                url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8C9dmireQvh0mHTXYkAMve5vfivfhQ3grQ&s",
+                title: "Asistencia técnica",
+                description: "Soluciones inmediatas y una excelente asistencia técnica"
             },
             {
-                url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1715&q=80",
-                title: "Analítica y Datos",
-                description: "Transformación de datos en insights accionables para la toma de decisiones."
+                url: "https://media.kingston.com/kingston/opengraph/ktc-opengraph-solutions-gaming-how-to-clean-your-pc-system.png",
+                title: "Limpieza y Optimización",
+                description: "Optimizamos tu sistema operativo de forma integral"
             }
         ];
 
