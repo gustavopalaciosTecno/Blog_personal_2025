@@ -11,8 +11,8 @@
         }
 
         .darkmode {
-            background-color: rgb(154, 165, 241);
-            color: rgb(77, 19, 223);
+            background-color: rgb(154, 155, 158);
+            color: rgb(64, 16, 187);
     }
 
 
@@ -741,5 +741,10 @@
                 width: 40px;
                 height: 40px;
                 font-size: 1.2rem;
+            }
+
+            .btn{
+                margin: -15px -5px 65px 0;
+                
             }
         }
