@@ -222,3 +222,9 @@
             // Para propósitos de demostración, establecer la primera sección como activa
             document.querySelector('.nav-link').classList.add('active');
         });
+
+
+function modoOscuro(){
+    document.body.classList.toggle("darkmode");
+}
+

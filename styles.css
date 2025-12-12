@@ -10,6 +10,12 @@
             --border-radius: 8px;
         }
 
+        .darkmode {
+            background-color: rgb(154, 165, 241);
+            color: rgb(162, 155, 155);
+    }
+
+
         * {
             margin: 0;
             padding: 0;
