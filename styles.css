@@ -4,7 +4,7 @@
             --secondary-color: #1e40af;
             --dark-color: #1e293b;
             --light-color: #f8fafc;
-            --gray-color: #64748b;
+            --gray-color: #05244f;
             --transition: all 0.3s ease;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --border-radius: 8px;
@@ -12,7 +12,7 @@
 
         .darkmode {
             background-color: rgb(154, 165, 241);
-            color: rgb(162, 155, 155);
+            color: rgb(77, 19, 223);
     }
 
 
