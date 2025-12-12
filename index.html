@@ -3,20 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio | Blog Personal</title>
+    <title>CodeSpark | Blog Personal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Botón para modo oscuro -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Modal para artículos del blog -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h2 class="modal-title" id="modalTitle">Título del Artículo</h2>
+                <div class="modal-meta" id="modalMeta">
+                    <span><i class="far fa-calendar"></i> <span id="modalDate">15 Mar, 2023</span></span>
+                    <span><i class="far fa-comments"></i> <span id="modalComments">12 Comentarios</span></span>
+                    <span><i class="far fa-clock"></i> <span id="modalReadTime">5 min lectura</span></span>
+                </div>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Contenido se llenará dinámicamente -->
+            </div>
+            <div class="modal-footer">
+                <div class="modal-tags" id="modalTags">
+                    <!-- Etiquetas se llenarán dinámicamente -->
+                </div>
+                <button class="btn" id="modalShare">
+                    <i class="fas fa-share-alt"></i> Compartir
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Header y Navegación -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo"><span class="letraNegra">Portafolio</span class="letraAzul">Code<span>Spark</span> </a>
+            <a href="#" class="logo">CodeSpark</a>
             
             <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </div>
-            <button class="btn"  onclick="modoOscuro()">Modo Grey</button>
+            
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="nav-link active">Inicio</a></li>
                 <li><a href="#about" class="nav-link">Sobre Mí</a></li>
@@ -69,13 +103,14 @@
                 
                 <div class="about-text">
                     <h3>Hola, soy Pablo Villarreal</h3>
-                    <p>Soy un un técnico informático con mas de 5 años de experiencia en reparación de celulares, notebook, pc de escritorio y sistemas operativos.</p>
+                    <p>Soy un un técnico informático con mas de 5 años de experiencia en reparación de celulares, notebook, pc de escritorio y sistemas operativos.
+
                     <p>Me apasiona aprender nuevas tecnologías y compartir conocimiento a través de mi blog. Creo que la tecnología bien aplicada puede transformar negocios y mejorar la vida de las personas.</p>
-                    
+                    <span style="text-transform: uppercase;">"Porcentaje de experiencia"</span>
                     <div class="skills">
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>Reparación de Notebook</span>
+                                <span>Reparación de PC-Desktop</span>
                                 <span>95%</span>
                             </div>
                             <div class="skill-bar">
@@ -85,7 +120,7 @@
                         
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>Celulares(Smartphone)</span>
+                                <span>Reparación de tablets</span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">
@@ -95,7 +130,7 @@
                         
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>Pc de Escritorio</span>
+                                <span>Reparación de dispositivos móviles</span>
                                 <span>85%</span>
                             </div>
                             <div class="skill-bar">
@@ -105,7 +140,7 @@
                         
                         <div class="skill-item">
                             <div class="skill-name">
-                                <span>Tablets</span>
+                                <span>Otros dispositivos</span>
                                 <span>80%</span>
                             </div>
                             <div class="skill-bar">
@@ -121,11 +156,11 @@
     <!-- Sección Portafolio -->
     <section id="portfolio" class="section">
         <div class="container">
-            <h2 class="section-title">Mi Portafolio</h2>
+            <h2 class="section-title">Portafolio CodeSpark</h2>
             
             <div class="portfolio-filter">
                 <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Desktop / Notebook</button>
+                <button class="filter-btn" data-filter="web">PC/Notebook</button>
                 <button class="filter-btn" data-filter="mobile">Smartphone</button>
                 <button class="filter-btn" data-filter="design">Tablets</button>
             </div>
@@ -136,8 +171,8 @@
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Proyecto 1">
                     </div>
                     <div class="portfolio-info">
-                        <h3>Desktop / Notebook</h3>
-                        <p>Plataforma de comercio electrónico desarrollada con React y Node.js con pasarela de pago integrada.</p>
+                        <h3>Reparación de Pc de escritorio</h3>
+                        <p>Instalación de sistemas operativos y cambio de componentes.</p>
                     </div>
                 </div>
                 
@@ -146,8 +181,8 @@
                         <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Proyecto 2">
                     </div>
                     <div class="portfolio-info">
-                        <h3>Smartphone</h3>
-                        <p>Aplicación móvil para seguimiento de entrenamiento y nutrición desarrollada con React Native.</p>
+                        <h3>Reparación de celulares</h3>
+                        <p>Cambio de pantalla, módulos, reparación de software y limpieza en general.</p>
                     </div>
                 </div>
                 
@@ -156,8 +191,8 @@
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1715&q=80" alt="Proyecto 3">
                     </div>
                     <div class="portfolio-info">
-                        <h3>Tablets</h3>
-                        <p>Interfaz de usuario para sistema de análisis de datos con visualizaciones interactivas.</p>
+                        <h3>Reparación de tablets</h3>
+                        <p>Diagnóstico y Reparación de todo tipo de componente.</p>
                     </div>
                 </div>
             </div>
@@ -176,8 +211,8 @@
                     </div>
                     <div class="education-content">
                         <span class="date">2020 - 2022</span>
-                        <h3>Máster en Desarrollo Web Full-Stack</h3>
-                        <p>Universidad Tecnológica - Especialización en tecnologías modernas como React, Node.js, MongoDB y despliegue en la nube.</p>
+                        <h3>Curso de Arduino</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A temporibus inventore eos expedita officia iste sapiente ea placeat obcaecati, possimus error dolore odio perspiciatis sit, mollitia, totam saepe alias non?.</p>
                     </div>
                 </div>
                 
@@ -187,8 +222,8 @@
                     </div>
                     <div class="education-content">
                         <span class="date">2021</span>
-                        <h3>Certificación AWS Solutions Architect</h3>
-                        <p>Amazon Web Services - Diseño e implementación de sistemas distribuidos en la nube de AWS.</p>
+                        <h3>Certificación Reparación de smartphone</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dolor repudiandae numquam nostrum nulla sed atque cupiditate fugiat. Pariatur magnam itaque cupiditate nesciunt inventore debitis iusto aliquid quam, ab distinctio..</p>
                     </div>
                 </div>
                 
@@ -198,8 +233,8 @@
                     </div>
                     <div class="education-content">
                         <span class="date">2016 - 2020</span>
-                        <h3>Ingeniería en Sistemas Computacionales</h3>
-                        <p>Universidad Nacional - Formación en fundamentos de programación, algoritmos y estructuras de datos.</p>
+                        <h3>Técnico en ingeniería elctromecánica</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolorem repellat explicabo inventore voluptatem maxime ipsum sint, quam dolorum eos obcaecati dolore assumenda velit vel fugiat! Exercitationem nihil repellendus nemo..</p>
                     </div>
                 </div>
                 
@@ -209,8 +244,8 @@
                     </div>
                     <div class="education-content">
                         <span class="date">2019</span>
-                        <h3>React Developer Certification</h3>
-                        <p>Meta (Facebook) - Certificación oficial en desarrollo de aplicaciones con React y ecosistema.</p>
+                        <h3>Certificado de microsoldadura</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa perferendis assumenda, perspiciatis saepe ex suscipit earum illo voluptatum, a ullam, soluta quis omnis quaerat reiciendis asperiores aspernatur est obcaecati sunt?.</p>
                     </div>
                 </div>
             </div>
@@ -232,9 +267,9 @@
                             <span><i class="far fa-calendar"></i> 15 Mar, 2023</span>
                             <span><i class="far fa-comments"></i> 12 Comentarios</span>
                         </div>
-                        <h3>Introducción al mundo de la Reparación de celulares</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, inventore sunt. Totam pariatur cum est eligendi vero, delectus quae laudantium provident laborum ipsam. Quae laborum cumque in voluptatum, quidem asperiores.</p>
-                        <a href="#" class="btn">Leer más</a>
+                        <h3>Introducción al mundo de los teléfonos móviles</h3>
+                        <p>Aprende a reparar estos dispositivos de forma fácil y rápida.</p>
+                        <a href="#" class="btn read-more-btn" data-article="1">Leer más</a>
                     </div>
                 </div>
                 
@@ -244,12 +279,12 @@
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> 28 Feb, 2025</span>
+                            <span><i class="far fa-calendar"></i> 28 Feb, 2023</span>
                             <span><i class="far fa-comments"></i> 8 Comentarios</span>
                         </div>
-                        <h3>Introducción al mundo de la Reparación de Tablets</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aut consequatur laudantium, facere natus dignissimos. Aliquam praesentium veritatis a eveniet, minima quia neque amet unde doloremque eaque, illum, temporibus sunt.</p>
-                        <a href="#" class="btn">Leer más</a>
+                        <h3>Optimización de rendimiento en sistema operativos</h3>
+                        <p>Técnicas avanzadas para mejorar el rendimiento de tu sistema operativo.</p>
+                        <a href="#" class="btn read-more-btn" data-article="2">Leer más</a>
                     </div>
                 </div>
                 
@@ -262,9 +297,9 @@
                             <span><i class="far fa-calendar"></i> 10 Feb, 2023</span>
                             <span><i class="far fa-comments"></i> 15 Comentarios</span>
                         </div>
-                        <h3>Instalación de Sistema operativos</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus commodi maiores doloremque, eum dolorum animi consequatur facere aut magnam, temporibus amet et sunt nihil in suscipit ipsa modi, inventore illo!</p>
-                        <a href="#" class="btn">Leer más</a>
+                        <h3>Venta de repuestas para celulares</h3>
+                        <p>Toda la guía completo de nuestros productos.</p>
+                        <a href="#" class="btn read-more-btn" data-article="3">Leer más</a>
                     </div>
                 </div>
             </div>
@@ -278,8 +313,8 @@
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Si tenes alguna duda, por favor, contactame</h3>
-                    <p>Estoy disponible en ofrecer un servicio integral. No dudes en contactarme para un mejor asesoramiento.</p>
+                    <h3>Asesoramiento al instante</h3>
+                    <p>Estoy disponible para ayudarte en tus dudas y ofrecerte el mejor servicio.</p>
                     
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -307,7 +342,7 @@
                         </div>
                         <div>
                             <h4>Teléfono</h4>
-                            <p>+54 9 3731 53-0438</p>
+                            <p>3731530438</p>
                         </div>
                     </div>
                 </div>
@@ -330,8 +365,8 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
-                    <h3>MiPortafolio</h3>
-                    <p>Técnico en reparación especializado en pc de escritorio, celualares y tablets.</p>
+                    <h3>CodeSpark</h3>
+                    <p>Técnico en reparación de PC-Notebook-Tablets.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -355,22 +390,21 @@
                 <div class="footer-col">
                     <h3>Servicios</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Instalación de sistemas operativos</a></li>
-                        <li><a href="#">Reparación de celulares</a></li>
-                        <li><a href="#">Limpieza de sistemas operativos</a></li>
-                        <li><a href="#">Reparación de tablets</a></li>
-                        <li><a href="#">Eliminación de malwares</a></li>
+                        <li><a href="#">Reparación de PC</a></li>
+                        <li><a href="#">Reparación de Notebook</a></li>
+                        <li><a href="#">Reparación de smarphone</a></li>
+                        <li><a href="#">limpieza y optimización</a></li>
+                        <li><a href="#">Eliminación de malware</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-            <p>Sitio web desarrollado por Néstor Gustavo Palacios Meyer</p>
-            <p>&copy; 2025 MiPortafolio. Todos los derechos reservados.</p>
+                <p>Sitio web realizado por Néstor Gustavo Palacios Meyer</p>
+                <p>&copy; 2025 MiPortafolio. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
-
     <script src="app.js"></script>
 </body>
 </html>
