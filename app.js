@@ -254,24 +254,25 @@
         const blogArticles = {
             1: {
                 title: "Aprende a reparar smartphone",
-                date: "15 Mar, 2023",
+                date: "15 Mar, 2025",
                 comments: "12 Comentarios",
                 readTime: "5 min lectura",
-                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-                tags: ["React", "JavaScript", "Frontend", "Hooks"],
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiykxApbNScFnYo1fMuaTvDkpqjMfxhp4_A&s",
+                tags: ["chips", "carcasas", "pantallas", "herramientas para celulares"],
                 content: `
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="React Hooks" class="modal-image">
-                    <p>Los React Hooks fueron introducidos en la versión 16.8 de React y han revolucionado la forma en que escribimos componentes funcionales. Antes de los Hooks, los componentes funcionales eran limitados porque no podían manejar estado o efectos secundarios.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus delectus reiciendis, corrupti ducimus, eveniet distinctio possimus rem quo expedita earum nobis a mollitia? Officia iste deleniti consequatur sit, ducimus dolorum?.</p>
                     
-                    <h3>¿Qué son los Hooks?</h3>
-                    <p>Los Hooks son funciones especiales que te permiten "enganchar" el estado de React y el ciclo de vida desde componentes funcionales. Esto significa que ya no necesitas convertir un componente funcional en uno de clase para usar estado o efectos.</p>
+                    <h3>¿Cómo funcionan los módulos en los celulares?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, odit aliquid. Iure illo magnam saepe qui aperiam fugiat maxime eaque sit. Porro dolores consequuntur ullam quaerat aperiam modi molestiae dicta?.</p>
                     
-                    <h3>Hooks Principales</h3>
+                    <h3>Tipos de pantallas</h3>
                     <ul>
-                        <li><strong>useState:</strong> Permite añadir estado a componentes funcionales</li>
-                        <li><strong>useEffect:</strong> Maneja efectos secundarios (similar a componentDidMount, componentDidUpdate, y componentWillUnmount combinados)</li>
-                        <li><strong>useContext:</strong> Permite acceder al contexto de React sin necesidad de consumidores anidados</li>
-                        <li><strong>useReducer:</strong> Una alternativa a useState para manejar estados complejos</li>
+                        <li><strong>Resistivas:</strong>Usan dos capas conductoras que se tocan al presionar, registrando el punto de contacto. Pueden ser usadas con cualquier objeto (dedo, lápiz) y son duraderas, pero ofrecen menor claridad de imagen y son de un solo toque.</li>
+                        <li><strong>Capacitivas:</strong>Detectan la carga eléctrica del dedo (o de un objeto conductor). Son las más usadas en smartphones y tablets (capacitivas proyectadas), ofreciendo imágenes nítidas, multitouch (zoom, gestos) y mayor sensibilidad.
+</li>
+                        <li><strong>Infrarrojas (IR):</strong>Tienen una rejilla de rayos infrarrojos alrededor del marco. Un toque interrumpe la luz, y el controlador calcula la posición..</li>
+                        <li><strong>Ópticas (Imágenes Ópticas):</strong>Utilizan cámaras infrarrojas para detectar la interrupción del haz de luz al tocar la pantalla. Soportan multitouch y son comunes en pantallas grandes.</li>
                     </ul>
                     
                     <h3>Ejemplo de useState</h3>
