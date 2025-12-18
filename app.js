@@ -257,7 +257,7 @@
                 date: "15 Mar, 2025",
                 comments: "12 Comentarios",
                 readTime: "5 min lectura",
-                image: "https://files.resources.altium.com/sites/default/files/styles/max_width_1300/public/blogs/Using%20Cellular%20Networks%20for%20Internet%20of%20Things-70772.jpg?VersionId=4tqSs5GkLMf_41V9dwpVkDxkSUBLAMEK&itok=jnS7YsUR",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH1474XhPrvdBDMmVsqDZ4NkOYeEWxnYsfLQ&s",
                 tags: ["chips", "módulos", "pantallas", "condensadores"],
                 content: `
                     <img src="https://files.resources.altium.com/sites/default/files/inline-images/sim-image.png">
