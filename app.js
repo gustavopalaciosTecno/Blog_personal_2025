@@ -253,7 +253,7 @@
         // Datos de los artículos del blog
         const blogArticles = {
             1: {
-                title: "Introducción a React Hooks",
+                title: "Aprende a reparar smartphone",
                 date: "15 Mar, 2023",
                 comments: "12 Comentarios",
                 readTime: "5 min lectura",
@@ -299,7 +299,7 @@
                     <p>Acá falta detalles.</p>
                     
                     <h3>1. Minimizar Reflows y Repaints</h3>
-                    <p>Los reflows y repaints son operaciones costosas que ocurren cuando el navegador debe recalcular la disposición de los elementos en la página. Para minimizarlos:</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus delectus reiciendis, corrupti ducimus, eveniet distinctio possimus rem quo expedita earum nobis a mollitia? Officia iste deleniti consequatur sit, ducimus dolorum?:</p>
                     <ul>
                         <li>Agrupa múltiples cambios de DOM en una sola operación</li>
                         <li>Usa documentFragment para hacer cambios fuera del DOM</li>
@@ -307,7 +307,7 @@
                     </ul>
                     
                     <h3>2. Debouncing y Throttling</h3>
-                    <p>Estas técnicas son esenciales para manejar eventos que se disparan con mucha frecuencia:</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus delectus reiciendis, corrupti ducimus, eveniet distinctio possimus rem quo expedita earum nobis a mollitia? Officia iste deleniti consequatur sit, ducimus dolorum?:</p>
                     <ul>
                         <li><strong>Debouncing:</strong> Retrasa la ejecución de una función hasta que pase un cierto tiempo sin que se dispare el evento</li>
                         <li><strong>Throttling:</strong> Limita la ejecución de una función a un cierto intervalo de tiempo</li>
