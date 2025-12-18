@@ -293,10 +293,10 @@
                 comments: "8 Comentarios",
                 readTime: "7 min lectura",
                 image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80",
-                tags: ["JavaScript", "Performance", "Optimización", "Web"],
+                tags: ["Desktop", "Smartphone", "Optimización", "Sistemas Operativos"],
                 content: `
                     <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="JavaScript Performance" class="modal-image">
-                    <p>La optimización del rendimiento en JavaScript es crucial para crear aplicaciones web rápidas y responsivas. En este artículo exploraremos técnicas avanzadas para mejorar el rendimiento de tus aplicaciones JavaScript.</p>
+                    <p>Acá falta detalles.</p>
                     
                     <h3>1. Minimizar Reflows y Repaints</h3>
                     <p>Los reflows y repaints son operaciones costosas que ocurren cuando el navegador debe recalcular la disposición de los elementos en la página. Para minimizarlos:</p>
@@ -314,13 +314,13 @@
                     </ul>
                     
                     <h3>3. Lazy Loading de Imágenes</h3>
-                    <p>Carga imágenes solo cuando sean necesarias (cuando estén a punto de entrar en la ventana gráfica):</p>
+                    <p>Acá falta detalles</p>
                     
                     <h3>4. Web Workers para Operaciones Intensivas</h3>
-                    <p>Los Web Workers permiten ejecutar código JavaScript en hilos separados, evitando bloquear el hilo principal:</p>
+                    <p>Acá falta detalles</p>
                     
                     <h3>5. Memoización</h3>
-                    <p>La memoización es una técnica de optimización que almacena los resultados de llamadas a funciones costosas:</p>
+                    <p>Acá falta detalles</p>
                     
                     <p>Implementar estas técnicas puede mejorar significativamente el rendimiento de tus aplicaciones JavaScript, proporcionando una mejor experiencia de usuario.</p>
                 `
