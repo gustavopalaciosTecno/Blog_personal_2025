@@ -253,39 +253,34 @@
         // Datos de los artículos del blog
         const blogArticles = {
             1: {
-                title: "Aprende a reparar smartphone",
+                title: "¿Qué es el IoT Celular?",
                 date: "15 Mar, 2025",
                 comments: "12 Comentarios",
                 readTime: "5 min lectura",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyiykxApbNScFnYo1fMuaTvDkpqjMfxhp4_A&s",
-                tags: ["chips", "carcasas", "pantallas", "herramientas para celulares"],
+                image: "https://files.resources.altium.com/sites/default/files/styles/max_width_1300/public/blogs/Using%20Cellular%20Networks%20for%20Internet%20of%20Things-70772.jpg?VersionId=4tqSs5GkLMf_41V9dwpVkDxkSUBLAMEK&itok=jnS7YsUR",
+                tags: ["chips", "módulos", "pantallas", "condensadores"],
                 content: `
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="React Hooks" class="modal-image">
+                    <img src="https://files.resources.altium.com/sites/default/files/inline-images/sim-image.png">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus delectus reiciendis, corrupti ducimus, eveniet distinctio possimus rem quo expedita earum nobis a mollitia? Officia iste deleniti consequatur sit, ducimus dolorum?.</p>
                     
-                    <h3>¿Cómo funcionan los módulos en los celulares?</h3>
+                    <h3>Servicios de Internet de las Cosas Celulares</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, odit aliquid. Iure illo magnam saepe qui aperiam fugiat maxime eaque sit. Porro dolores consequuntur ullam quaerat aperiam modi molestiae dicta?.</p>
                     
-                    <h3>Tipos de pantallas</h3>
+                    <h3>Tarjetas SIM</h3>
                     <ul>
-                        <li><strong>Resistivas:</strong>Usan dos capas conductoras que se tocan al presionar, registrando el punto de contacto. Pueden ser usadas con cualquier objeto (dedo, lápiz) y son duraderas, pero ofrecen menor claridad de imagen y son de un solo toque.</li>
-                        <li><strong>Capacitivas:</strong>Detectan la carga eléctrica del dedo (o de un objeto conductor). Son las más usadas en smartphones y tablets (capacitivas proyectadas), ofreciendo imágenes nítidas, multitouch (zoom, gestos) y mayor sensibilidad.
-</li>
-                        <li><strong>Infrarrojas (IR):</strong>Tienen una rejilla de rayos infrarrojos alrededor del marco. Un toque interrumpe la luz, y el controlador calcula la posición..</li>
-                        <li><strong>Ópticas (Imágenes Ópticas):</strong>Utilizan cámaras infrarrojas para detectar la interrupción del haz de luz al tocar la pantalla. Soportan multitouch y son comunes en pantallas grandes.</li>
+                        <li><strong>Noticia1:</strong> las tarjetas SIM de un proveedor regular no vienen con una hoja de datos técnicos; ni hablar de un rango de temperatura de servicio especificado o cualquier calificación industrial/automotriz. .</li>
+                        <li><strong>Noticia2:</strong> Con las tarjetas SIM M2M, puedes obtener tarjetas con rango de temperatura extendido que ofrecen una vida útil calificada de 10 años. Estas calificaciones pueden ser críticas para el éxito de tu dispositivo.</li>
+
+                        <li><strong>Noticia3:</strong>Si tu dispositivo está en un taladro petrolífero remoto o en una granja rural, el costo de tener que visitar el sitio un técnico o ingeniero podría ser increíblemente caro, solo para reemplazar una tarjeta SIM que cuesta unos pocos dólares..</li>
+                        <li><strong>Noticia4:</strong>es posible que no se espere que las tarjetas SIM de grado consumidor tengan una vida útil más allá del contrato de 24 meses del teléfono.</li>
                     </ul>
                     
-                    <h3>Ejemplo de useState</h3>
-                    <p>Veamos un ejemplo básico de cómo usar useState:</p>
+                    <h3>Tarjeta SIM integrada (eSIM)</h3>
+                    <p>¿Qué es una tarjeta eSIM?:</p>
                     
-                    <h3>Reglas de los Hooks</h3>
-                    <p>Es importante seguir dos reglas fundamentales cuando uses Hooks:</p>
-                    <ul>
-                        <li>Solo llama Hooks en el nivel superior. No llames Hooks dentro de bucles, condiciones o funciones anidadas.</li>
-                        <li>Solo llama Hooks desde componentes funcionales de React o desde Hooks personalizados.</li>
-                    </ul>
+                    <h3>Alternativamente, el uso de un módulo de módem celular integrado como una tarjeta SIM (eSIM) ahorra un espacio significativo en la placa</h3>
+                     <p>Mientras que una tarjeta SIM solo se puede leer, una eSIM es regrabable y, lo que es mejor, se puede montar en superficie como cualquier otro componente en su placa. Vale la pena mencionar que el soporte para eSIM no está tan ampliamente disponible como para una tarjeta SIM regular. Sin embargo, la mayoría de las grandes redes en el mundo desarrollado las soportarán. Además de ahorrar espacio en la placa, también podría estar mirando un ahorro de costos significativo al adoptar una eSIM para productos de Internet de las cosas celulares. El costo de un chip eSIM es típicamente más bajo que una tarjeta SIM más el zócalo y ahorra considerablemente en la mano de obra de insertar manualmente una tarjeta SIM en un zócalo. La eSIM podría ser programada automáticamente durante el proceso de quemado y prueba del ensamblaje de su dispositivo.</p>
                     
-                    <p>Los Hooks han hecho que React sea más accesible y han simplificado significativamente el código, reduciendo la cantidad de código boilerplate necesario para crear componentes con estado.</p>
                 `
             },
             2: {
